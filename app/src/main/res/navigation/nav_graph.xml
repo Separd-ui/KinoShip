@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/latestMovieFragment">
+
+    <fragment
+        android:id="@+id/latestMovieFragment"
+        android:name="com.example.kinoship.ui.fragments.LatestMovieFragment"
+        android:label="fragment_latest_movie"
+        tools:layout="@layout/fragment_latest_movie" >
+        <action
+            app:enterAnim="@anim/scale_in"
+            app:exitAnim="@anim/slide_left"
+            app:popEnterAnim="@anim/slide_right"
+            app:popExitAnim="@anim/scale_off"
+            android:id="@+id/action_latestMovieFragment_to_movieDetailFragment"
+            app:destination="@id/movieDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/popularMovieFragment"
+        android:name="com.example.kinoship.ui.fragments.PopularMovieFragment"
+        android:label="fragment_popular_movie"
+        tools:layout="@layout/fragment_popular_movie" >
+        <action
+            android:id="@+id/action_popularMovieFragment_to_movieDetailFragment"
+            app:destination="@id/movieDetailFragment"
+            app:enterAnim="@anim/scale_in"
+            app:exitAnim="@anim/slide_left"
+            app:popEnterAnim="@anim/slide_right"
+            app:popExitAnim="@anim/scale_off" />
+    </fragment>
+    <fragment
+        android:id="@+id/savedMovieFragment"
+        android:name="com.example.kinoship.ui.fragments.SavedMovieFragment"
+        android:label="fragment_saved_movie"
+        tools:layout="@layout/fragment_saved_movie" >
+        <action
+            app:enterAnim="@anim/scale_in"
+            app:exitAnim="@anim/slide_left"
+            app:popEnterAnim="@anim/slide_right"
+            app:popExitAnim="@anim/scale_off"
+            android:id="@+id/action_savedMovieFragment_to_movieDetailFragment"
+            app:destination="@id/movieDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchMovieFragment"
+        android:name="com.example.kinoship.ui.fragments.SearchMovieFragment"
+        android:label="fragment_search_movie"
+        tools:layout="@layout/fragment_search_movie" >
+        <action
+            app:enterAnim="@anim/scale_in"
+            app:exitAnim="@anim/slide_left"
+            app:popEnterAnim="@anim/slide_right"
+            app:popExitAnim="@anim/scale_off"
+            android:id="@+id/action_searchMovieFragment_to_movieDetailFragment"
+            app:destination="@id/movieDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieDetailFragment"
+        android:name="com.example.kinoship.ui.fragments.MovieDetailFragment"
+        android:label="fragment_movie_detail"
+        tools:layout="@layout/fragment_movie_detail" >
+        <argument
+            android:name="movie"
+            app:argType="com.example.kinoship.models.Result" />
+        <argument
+            android:name="isSaved"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+</navigation>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:icon="@drawable/ic_latest"
+        android:title="Latest"
+        android:id="@+id/latestMovieFragment"/>
+
+    <item
+        android:id="@+id/popularMovieFragment"
+        android:title="Popular"
+        android:icon="@drawable/ic_popular"/>
+    <item
+        android:icon="@drawable/ic_saved"
+        android:title="Saved"
+        android:id="@+id/savedMovieFragment"/>
+    <item
+        android:id="@+id/searchMovieFragment"
+        android:title="Search"
+        android:icon="@drawable/ic_search"/>
+</menu>
