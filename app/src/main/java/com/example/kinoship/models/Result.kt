@@ -9,7 +9,7 @@ data class Result(
     @PrimaryKey(autoGenerate = true)
     var id: Int?=null,
     val adult: Boolean,
-    val backdrop_path: String,
+    val backdrop_path: String?=null,
     val genre_ids: List<Int>,
     val original_language: String,
     val original_title: String,

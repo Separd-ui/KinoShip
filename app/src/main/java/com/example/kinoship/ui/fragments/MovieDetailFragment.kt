@@ -1,6 +1,7 @@
 package com.example.kinoship.ui.fragments
 
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import android.view.animation.AccelerateDecelerateInterpolator
 import android.view.animation.Animation
@@ -59,6 +60,7 @@ class MovieDetailFragment : Fragment() {
             isVisible= !args.isSaved
             setOnClickListener {
                 movie.dateAdded=System.currentTimeMillis()
+                Log.d("MyLog","Movie:"+movie)
                 viewModel.addToDb(movie)
                 isVisible=false
                 binding.explosion.isVisible=true
